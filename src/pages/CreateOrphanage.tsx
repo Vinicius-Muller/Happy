@@ -101,7 +101,7 @@ export default function CreateOrphanage() {
               onClick={handleMapClick}
             >
               <TileLayer 
-                url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
+                url={`https://api.mapbox.com/v4/mapbox.mapbox-streets-v8/12/1171/1566.mvt?style=mapbox://styles/mapbox/streets-v11@00&access_token=pk.eyJ1IjoidmluaWNpdXNtdWxsZXIiLCJhIjoiY2tpM2pnczF2MGwxdTJybWkzbGE1bHZmbSJ9.KM3hDfdwKM32ksWC9xnAyw`}
               />
 
             { position.latitude != 0 ? <Marker interactive={false} icon={happyMapIcon} position={[position.latitude,position.longitude]} /> : null}
@@ -132,9 +132,13 @@ export default function CreateOrphanage() {
               })}
 
                 <button type="button" className="new-image">
-                <FiPlus size={24} color="#15b6d6" />
-                <input multiple onChange={handleSelectImages} type="file" id="image[]" />
+                
+                <FiPlus size={24} color="#15b6d6" type="label"/>
+                <input multiple onChange={handleSelectImages} type="file" id="image" />
+                
+                
               </button>
+              
 
               </div>
             

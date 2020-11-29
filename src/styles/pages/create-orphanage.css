@@ -154,3 +154,11 @@ form.create-orphanage-form button.confirm-button svg {
 form.create-orphanage-form button.confirm-button:hover {
   background: #36CF82;
 }
+
+
+#image {
+  width: 500px !important;
+  height: 70px;
+  cursor: pointer;
+  opacity: 0.3;
+}
